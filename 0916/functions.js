@@ -13,7 +13,7 @@ function rangeRGB() {
     $('blue-value').value = b;
     $('alpha-value').value = a;
 
-    document.getElementById('rgb-box').style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
+    $('rgb-box').style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
 function typeRGB() {
@@ -30,6 +30,22 @@ function typeRGB() {
     document.getElementById('rgb-box').style.backgroundColor = `rgba(${rBoxValue}, ${gBoxValue}, ${bBoxValue}, ${aBoxValue})`;
 }
 
+function divTweaker() {
+    const w = $('width-range').value;
+    const h = $('height-range').value;
+    const r = $('radius-range').value;
+    const mL = $('marginl-range').value;
+    const mT = $('margint-range').value;
+
+    $('rgb-box').style.width = `${w}px`;
+    $('rgb-box').style.height = `${h}px`;
+    $('rgb-box').style.borderRadius = `${r}px`;
+    $('rgb-box').style.marginLeft = `${mL}px`;
+    $('rgb-box').style.marginTop = `${mT}px`;
+}
+
+
+
 
 $('red-range').addEventListener("input", rangeRGB);
 $('green-range').addEventListener("input", rangeRGB);
@@ -40,3 +56,9 @@ $('red-value').addEventListener("input", typeRGB);
 $('green-value').addEventListener("input", typeRGB);
 $('blue-value').addEventListener("input", typeRGB);
 $('alpha-value').addEventListener("input", typeRGB);
+
+$('width-range').addEventListener("input", divTweaker);
+$('height-range').addEventListener("input", divTweaker);
+$('radius-range').addEventListener("input", divTweaker);
+$('marginl-range').addEventListener("input", divTweaker);
+$('margint-range').addEventListener("input", divTweaker);

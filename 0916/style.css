@@ -5,3 +5,23 @@
     margin: 45px 30px;
 }
 
+table{
+    display: inline;
+    margin: auto 100px auto auto;
+}
+
+#red-range{
+    accent-color: red;
+}
+
+#green-range{
+    accent-color: green;
+}
+
+#blue-range{
+    accent-color: blue;
+}
+
+#alpha-range{
+    accent-color: black;
+}

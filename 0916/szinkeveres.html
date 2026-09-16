@@ -33,8 +33,32 @@
         </tbody>
     </table>
 
-    <div id="rgb-box"></div>
+    <table>
+        <tbody>
+            <tr>
+                <td>Szélesség:</td>
+                <td><input type="range" id="width-range" min="0" max="600" value="200"></td>
+            </tr>
+            <tr>
+                <td>Hosszúság:</td>
+                <td><input type="range" id="height-range" min="0" max="400" value="200"></td>
+            </tr>
+            <tr>
+                <td>Lekerekítés:</td>
+                <td><input type="range" id="radius-range" min="0" max="300" value="0"></td>
+            </tr>
+            <tr>
+                <td>Bal margó:</td>
+                <td><input type="range" id="marginl-range" min="-600" max="600" value="0" step="10"></td>
+            </tr>
+            <tr>
+                <td>Felső margó:</td>
+                <td><input type="range" id="margint-range" min="-1000" max="1000" value="0" step="10"></td>
+            </tr>
+        </tbody>
+    </table>
 
+    <div id="rgb-box"></div>
 
     <script src="functions.js"></script>
 </body>
