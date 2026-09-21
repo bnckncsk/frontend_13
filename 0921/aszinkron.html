@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aszinkron mukodes</title>
+</head>
+<body>
+    <script>
+        const masodik = () => {
+            setTimeout(() => {
+                console.log('Masodik');
+            }, 2000);
+        }
+
+        const elso = () => {
+            console.log('Elso');
+            masodik();
+            console.log('Harmadik');
+        }
+
+        elso();
+    </script>
+</body>
+</html>

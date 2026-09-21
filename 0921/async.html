@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Async-Await</title>
+</head>
+<body>
+    <script>
+        const receptekLekerdez = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (Math.random() < 0.5) // fele-fele aranyban hiba
+                    resolve([122, 673, 89, 24, 745]);
+                reject('Az azonositok lekerdezese nem sikerult.');
+            }, 5000);
+        });
+
+        const receptLekerdez = (id) => new Promise((resolve, reject) => {
+            setTimeout((id) => {
+                const recept = {
+                    id: 89,
+                    cim: "Gulyas leves",
+                    kategoria: "leves",
+                    ido: "180 perc",
+                    nehezseg: 3
+                };
+
+                if (Math.random() < 0.9)
+                    resolve(recept);
+                reject('A recept lekerdezese nem sikerult.')
+            }, 2500);
+        });
+
+        const receptKategoriaAlapjan = (kategoria) => new Promise((resolve, reject) => {
+            const levesek = [
+                { id: 89, cim: 'Gulyasleves', kategoria: 'leves'},
+                { id: 148, cim: 'Karalabeleves', kategoria: 'leves'},
+                { id: 397, cim: 'Gyumolcsleves', kategoria: 'leves'}
+            ];
+
+            setTimeout((kategoria) => {
+                if (Math.random() < 0.9)
+                    resolve(levesek);
+                reject(`Nem sikerult lekerdezni a ${kategoria} kategoriat.`)
+            }, 1500);
+        });
+
+        async function getReceptek() {
+            const azonositok = await receptekLekerdez;
+            console.log(azonositok);
+            const recept = await receptLekerdez(azonositok[2]);
+            console.log(recept);
+            const receptek = await receptKategoriaAlapjan(recept.kategoria);
+            console.log(receptek);
+        }
+        getReceptek();
+
+    </script>
+</body>
+</html>
