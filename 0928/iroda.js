@@ -1,7 +1,4 @@
 class Route {
-    ut;
-    atlag;
-
     constructor(ut, atlag) {
         this.ut = ut;
         this.atlag = atlag
