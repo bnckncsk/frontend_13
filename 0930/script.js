@@ -24,9 +24,9 @@ const $ = id => document.getElementById(id);
 
 const url = "https://pokeapi.co/api/v2/pokemon/";
 
-let getPokeData = async( name="" ) => {
+let getPokeData = async( name ) => {
     let finalUrl;
-    if (name == "") {
+    if (name == undefined) {
         let id = Math.floor(Math.random() * 1025 + 1);
         finalUrl = url + id;
     } else{
@@ -93,8 +93,17 @@ let styleCard = type => {
 }
 
 
-$('btn').addEventListener('click', getPokeData);
+$('btn').addEventListener('click', () => {
+    getPokeData();
+});
+
 $('btn2').addEventListener('click', () => {
     const pokeName = $('poke-name').value;
+
+    if (pokeName === "") {
+        $('error').style.display = "block";
+        return;
+    }
+
     getPokeData(pokeName);
 })
