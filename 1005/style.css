@@ -1,0 +1,20 @@
+#zenek tr:nth-child(even){
+    background-color: #eee;
+}
+
+.play{
+    cursor: pointer;
+}
+
+.play:hover{
+    text-decoration: underline;
+    color: rebeccapurple
+}
+
+table td img{
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+}
