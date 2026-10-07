@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: lightgray;
+}
+
+.cards {
+    display: none;
+    width: 180px;
+    min-height: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(148, 233, 152, 0.6);
+}
+
+.cards img {
+    width: 100px;
+}
+
+input{
+    width: 200px;
+    height: 20px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+button {
+    background-color: rgba(148, 233, 152, 1);
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    font-weight: bold;
+}
+
+h1, h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3{
+    font-size: 22px;
+}
+
+.cards p{
+    font-size: 16px;
+}
