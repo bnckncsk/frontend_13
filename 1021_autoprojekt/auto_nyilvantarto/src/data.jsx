@@ -21,8 +21,11 @@ export function listaz(){
 }
 
 export function felvesz(ujAuto){
-    
-    AUTOK.push(ujAuto);
+    // AUTOK.push(ujAuto);      nem jo, nem frissiti az egesz tombot ezert nem jelenik meg az uj auto sem
+    if (AUTOK.find( a => a.rendszam == ujAuto.rendszam))
+        return;
+
+    AUTOK = [...AUTOK, ujAuto];
 }
 
 export function torol(rendszam){
