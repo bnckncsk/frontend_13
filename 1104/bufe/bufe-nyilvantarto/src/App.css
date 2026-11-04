@@ -1,0 +1,44 @@
+#termekekDiv{
+  width: 60%;
+}
+
+#formDiv{
+  width: 35%;
+}
+
+main{
+  display: flex;
+  padding: 20px;
+}
+
+#termekek{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h2{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button{
+  margin: 15px auto;
+  padding: 8px 30px;
+  border: none;
+  background-color: coral;
+  border-radius: 6px;
+  color: white;
+  display: block;
+  font-size: 16px;
+}
+
+.termek{
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid coral;
+  min-width: 150px;
+}
+
+h1{
+  text-align: center;
+}
